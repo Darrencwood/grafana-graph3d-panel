@@ -121,7 +121,7 @@ System.register(['lodash', 'jquery', 'moment', 'app/core/utils/kbn', './vis'], f
         z: createColumnFormater(panel.styles.z)
       };
 
-      var labels = _.pluck(data, 'label');
+      var labels = _.map(data, 'label');
 
       var datapoints = [];
       datapoints.push(_.map(data[0].datapoints, function (dp) {
