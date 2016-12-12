@@ -116,7 +116,7 @@ export default function link(scope, elem, attrs, ctrl) {
         z: createColumnFormater(panel.styles.z)
     };
 
-    var labels = _.pluck(data, 'label');
+    var labels = _.map(data, 'label');
 
     var datapoints = [];
     datapoints.push(_.map(data[0].datapoints, function(dp) {
